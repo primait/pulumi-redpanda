@@ -15,14 +15,15 @@
 package redpanda
 
 import (
+	"context"
 	"path"
 
 	// Allow embedding bridge-metadata.json in the provider.
 	_ "embed"
 
+	pfbridge "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
-	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	redpanda "github.com/redpanda-data/terraform-provider-redpanda/redpanda" // Import the upstream provider
 
@@ -44,6 +45,7 @@ var metadata []byte
 // Provider returns additional overlaid schema and metadata associated with the provider.
 func Provider() tfbridge.ProviderInfo {
 	// Create a Pulumi provider mapping
+
 	prov := tfbridge.ProviderInfo{
 		// Instantiate the Terraform provider
 		//
@@ -105,7 +107,7 @@ func Provider() tfbridge.ProviderInfo {
 		// - "github.com/hashicorp/terraform-plugin-framework/provider".Provider (for plugin-framework)
 		//
 		//nolint:lll
-		P: shimv2.NewProvider(redpanda.New(version.Version)()),
+		P: pfbridge.ShimProvider(redpanda.New(context.Background(), "", version.Version)()),
 
 		Name:    "redpanda",
 		Version: version.Version,
@@ -135,7 +137,7 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/primait/pulumi-redpanda",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this should
 		// match the TF provider module's require directive, not any replace directives.
-		GitHubOrg:    "",
+		GitHubOrg:    "primait",
 		MetadataInfo: tfbridge.NewProviderMetadata(metadata),
 		Config: map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
