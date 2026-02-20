@@ -137,7 +137,7 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/primait/pulumi-redpanda",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this should
 		// match the TF provider module's require directive, not any replace directives.
-		GitHubOrg:    "primait",
+		GitHubOrg:    "redpanda-data",
 		MetadataInfo: tfbridge.NewProviderMetadata(metadata),
 		Config: map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
