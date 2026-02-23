@@ -1,0 +1,426 @@
+{
+    "auto-aliasing": {
+        "resources": {
+            "redpanda_acl": {
+                "current": "redpanda:index/acl:Acl",
+                "majorVersion": 1
+            },
+            "redpanda_cluster": {
+                "current": "redpanda:index/cluster:Cluster",
+                "majorVersion": 1,
+                "fields": {
+                    "aws_private_link": {
+                        "fields": {
+                            "allowed_principals": {
+                                "maxItemsOne": false
+                            },
+                            "status": {
+                                "fields": {
+                                    "vpc_endpoint_connections": {
+                                        "maxItemsOne": false,
+                                        "elem": {
+                                            "fields": {
+                                                "dns_entries": {
+                                                    "maxItemsOne": false
+                                                },
+                                                "load_balancer_arns": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "azure_private_link": {
+                        "fields": {
+                            "allowed_subscriptions": {
+                                "maxItemsOne": false
+                            },
+                            "status": {
+                                "fields": {
+                                    "approved_subscriptions": {
+                                        "maxItemsOne": false
+                                    },
+                                    "private_endpoint_connections": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "gcp_private_service_connect": {
+                        "fields": {
+                            "consumer_accept_list": {
+                                "maxItemsOne": false
+                            },
+                            "status": {
+                                "fields": {
+                                    "connected_endpoints": {
+                                        "maxItemsOne": false
+                                    },
+                                    "dns_a_records": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "http_proxy": {
+                        "fields": {
+                            "mtls": {
+                                "fields": {
+                                    "ca_certificates_pem": {
+                                        "maxItemsOne": false
+                                    },
+                                    "principal_mapping_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "kafka_api": {
+                        "fields": {
+                            "mtls": {
+                                "fields": {
+                                    "ca_certificates_pem": {
+                                        "maxItemsOne": false
+                                    },
+                                    "principal_mapping_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "seed_brokers": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    },
+                    "read_replica_cluster_ids": {
+                        "maxItemsOne": false
+                    },
+                    "schema_registry": {
+                        "fields": {
+                            "mtls": {
+                                "fields": {
+                                    "ca_certificates_pem": {
+                                        "maxItemsOne": false
+                                    },
+                                    "principal_mapping_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "zones": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "redpanda_network": {
+                "current": "redpanda:index/network:Network",
+                "majorVersion": 1,
+                "fields": {
+                    "customer_managed_resources": {
+                        "fields": {
+                            "aws": {
+                                "fields": {
+                                    "private_subnets": {
+                                        "fields": {
+                                            "arns": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "redpanda_pipeline": {
+                "current": "redpanda:index/pipeline:Pipeline",
+                "majorVersion": 1
+            },
+            "redpanda_resource_group": {
+                "current": "redpanda:index/resourceGroup:ResourceGroup",
+                "majorVersion": 1
+            },
+            "redpanda_role": {
+                "current": "redpanda:index/role:Role",
+                "majorVersion": 1
+            },
+            "redpanda_role_assignment": {
+                "current": "redpanda:index/roleAssignment:RoleAssignment",
+                "majorVersion": 1
+            },
+            "redpanda_schema": {
+                "current": "redpanda:index/schema:Schema",
+                "majorVersion": 1,
+                "fields": {
+                    "references": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "redpanda_schema_registry_acl": {
+                "current": "redpanda:index/schemaRegistryAcl:SchemaRegistryAcl",
+                "majorVersion": 1
+            },
+            "redpanda_serverless_cluster": {
+                "current": "redpanda:index/serverlessCluster:ServerlessCluster",
+                "majorVersion": 1,
+                "fields": {
+                    "kafka_api": {
+                        "fields": {
+                            "private_seed_brokers": {
+                                "maxItemsOne": false
+                            },
+                            "seed_brokers": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "redpanda_serverless_private_link": {
+                "current": "redpanda:index/serverlessPrivateLink:ServerlessPrivateLink",
+                "majorVersion": 1,
+                "fields": {
+                    "cloud_provider_config": {
+                        "fields": {
+                            "aws": {
+                                "fields": {
+                                    "allowed_principals": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "status": {
+                        "fields": {
+                            "aws": {
+                                "fields": {
+                                    "availability_zones": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "redpanda_topic": {
+                "current": "redpanda:index/topic:Topic",
+                "majorVersion": 1
+            },
+            "redpanda_user": {
+                "current": "redpanda:index/user:User",
+                "majorVersion": 1
+            }
+        },
+        "datasources": {
+            "redpanda_cluster": {
+                "current": "redpanda:index/getCluster:getCluster",
+                "majorVersion": 1,
+                "fields": {
+                    "aws_private_link": {
+                        "fields": {
+                            "allowed_principals": {
+                                "maxItemsOne": false
+                            },
+                            "status": {
+                                "fields": {
+                                    "vpc_endpoint_connections": {
+                                        "maxItemsOne": false,
+                                        "elem": {
+                                            "fields": {
+                                                "dns_entries": {
+                                                    "maxItemsOne": false
+                                                },
+                                                "load_balancer_arns": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "azure_private_link": {
+                        "fields": {
+                            "allowed_subscriptions": {
+                                "maxItemsOne": false
+                            },
+                            "status": {
+                                "fields": {
+                                    "approved_subscriptions": {
+                                        "maxItemsOne": false
+                                    },
+                                    "private_endpoint_connections": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "gcp_private_service_connect": {
+                        "fields": {
+                            "consumer_accept_list": {
+                                "maxItemsOne": false
+                            },
+                            "status": {
+                                "fields": {
+                                    "connected_endpoints": {
+                                        "maxItemsOne": false
+                                    },
+                                    "dns_a_records": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "http_proxy": {
+                        "fields": {
+                            "mtls": {
+                                "fields": {
+                                    "ca_certificates_pem": {
+                                        "maxItemsOne": false
+                                    },
+                                    "principal_mapping_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "kafka_api": {
+                        "fields": {
+                            "mtls": {
+                                "fields": {
+                                    "ca_certificates_pem": {
+                                        "maxItemsOne": false
+                                    },
+                                    "principal_mapping_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "seed_brokers": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    },
+                    "read_replica_cluster_ids": {
+                        "maxItemsOne": false
+                    },
+                    "schema_registry": {
+                        "fields": {
+                            "mtls": {
+                                "fields": {
+                                    "ca_certificates_pem": {
+                                        "maxItemsOne": false
+                                    },
+                                    "principal_mapping_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "zones": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "redpanda_network": {
+                "current": "redpanda:index/getNetwork:getNetwork",
+                "majorVersion": 1,
+                "fields": {
+                    "customer_managed_resources": {
+                        "fields": {
+                            "aws": {
+                                "fields": {
+                                    "private_subnets": {
+                                        "fields": {
+                                            "arns": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "redpanda_region": {
+                "current": "redpanda:index/getRegion:getRegion",
+                "majorVersion": 1,
+                "fields": {
+                    "zones": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "redpanda_regions": {
+                "current": "redpanda:index/getRegions:getRegions",
+                "majorVersion": 1,
+                "fields": {
+                    "regions": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "zones": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "redpanda_resource_group": {
+                "current": "redpanda:index/getResourceGroup:getResourceGroup",
+                "majorVersion": 1
+            },
+            "redpanda_schema": {
+                "current": "redpanda:index/getSchema:getSchema",
+                "majorVersion": 1,
+                "fields": {
+                    "references": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "redpanda_serverless_cluster": {
+                "current": "redpanda:index/getServerlessCluster:getServerlessCluster",
+                "majorVersion": 1
+            },
+            "redpanda_serverless_regions": {
+                "current": "redpanda:index/getServerlessRegions:getServerlessRegions",
+                "majorVersion": 1,
+                "fields": {
+                    "serverless_regions": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "redpanda_throughput_tiers": {
+                "current": "redpanda:index/getThroughputTiers:getThroughputTiers",
+                "majorVersion": 1,
+                "fields": {
+                    "throughput_tiers": {
+                        "maxItemsOne": false
+                    }
+                }
+            }
+        }
+    },
+    "auto-settings": {}
+}

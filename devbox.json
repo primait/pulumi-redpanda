@@ -1,0 +1,24 @@
+{
+  "packages": [
+    "yarn@latest",
+    "pulumictl@latest",
+    "go@1.24.",
+    "nodejs@20.",
+    "python3@3.11.8",
+    "dotnet-sdk@8.0.",
+    "gradle@latest",
+    "curl@8",
+    "mise@latest",
+    "nuget"
+  ],
+  "shell": {
+    "init_hook": [
+      "export PATH=\"$(pwd)/bin/:$PATH\""
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}
