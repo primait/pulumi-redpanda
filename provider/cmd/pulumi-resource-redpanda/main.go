@@ -15,12 +15,12 @@
 package main
 
 import (
+	"context"
 	_ "embed"
 
 	redpanda "github.com/primait/pulumi-redpanda/provider"
-	"github.com/primait/pulumi-redpanda/provider/pkg/version"
 
-	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 )
 
 //go:embed schema.json
@@ -28,5 +28,10 @@ var pulumiSchema []byte
 
 func main() {
 	// Modify the path to point to the new provider
-	tfbridge.Main("redpanda", version.Version, redpanda.Provider(), pulumiSchema)
+	// tfbridge.Main("redpanda", version.Version, redpanda.Provider(), tfbridge.ProviderMetadata{
+	// 	PackageSchema: pulumiSchema,
+	// })
+	tfbridge.Main(context.Background(), "redpanda", redpanda.Provider(), tfbridge.ProviderMetadata{
+		PackageSchema: pulumiSchema,
+	})
 }
