@@ -1,0 +1,3 @@
+name: redpanda
+description: A Pulumi resource provider for redpanda.
+language: python
