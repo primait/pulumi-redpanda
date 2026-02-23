@@ -36,11 +36,8 @@ from . import outputs
 if typing.TYPE_CHECKING:
     import pulumi_redpanda.config as __config
     config = __config
-    import pulumi_redpanda.region as __region
-    region = __region
 else:
     config = _utilities.lazy_import('pulumi_redpanda.config')
-    region = _utilities.lazy_import('pulumi_redpanda.region')
 
 _utilities.register(
     resource_modules="""
