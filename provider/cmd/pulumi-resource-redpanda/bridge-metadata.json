@@ -2,12 +2,10 @@
     "auto-aliasing": {
         "resources": {
             "redpanda_acl": {
-                "current": "redpanda:index/acl:Acl",
-                "majorVersion": 1
+                "current": "redpanda:index/acl:Acl"
             },
             "redpanda_cluster": {
                 "current": "redpanda:index/cluster:Cluster",
-                "majorVersion": 1,
                 "fields": {
                     "aws_private_link": {
                         "fields": {
@@ -122,7 +120,6 @@
             },
             "redpanda_network": {
                 "current": "redpanda:index/network:Network",
-                "majorVersion": 1,
                 "fields": {
                     "customer_managed_resources": {
                         "fields": {
@@ -142,24 +139,19 @@
                 }
             },
             "redpanda_pipeline": {
-                "current": "redpanda:index/pipeline:Pipeline",
-                "majorVersion": 1
+                "current": "redpanda:index/pipeline:Pipeline"
             },
             "redpanda_resource_group": {
-                "current": "redpanda:index/resourceGroup:ResourceGroup",
-                "majorVersion": 1
+                "current": "redpanda:index/resourceGroup:ResourceGroup"
             },
             "redpanda_role": {
-                "current": "redpanda:index/role:Role",
-                "majorVersion": 1
+                "current": "redpanda:index/role:Role"
             },
             "redpanda_role_assignment": {
-                "current": "redpanda:index/roleAssignment:RoleAssignment",
-                "majorVersion": 1
+                "current": "redpanda:index/roleAssignment:RoleAssignment"
             },
             "redpanda_schema": {
                 "current": "redpanda:index/schema:Schema",
-                "majorVersion": 1,
                 "fields": {
                     "references": {
                         "maxItemsOne": false
@@ -167,12 +159,10 @@
                 }
             },
             "redpanda_schema_registry_acl": {
-                "current": "redpanda:index/schemaRegistryAcl:SchemaRegistryAcl",
-                "majorVersion": 1
+                "current": "redpanda:index/schemaRegistryAcl:SchemaRegistryAcl"
             },
             "redpanda_serverless_cluster": {
                 "current": "redpanda:index/serverlessCluster:ServerlessCluster",
-                "majorVersion": 1,
                 "fields": {
                     "kafka_api": {
                         "fields": {
@@ -188,7 +178,6 @@
             },
             "redpanda_serverless_private_link": {
                 "current": "redpanda:index/serverlessPrivateLink:ServerlessPrivateLink",
-                "majorVersion": 1,
                 "fields": {
                     "cloud_provider_config": {
                         "fields": {
@@ -215,18 +204,15 @@
                 }
             },
             "redpanda_topic": {
-                "current": "redpanda:index/topic:Topic",
-                "majorVersion": 1
+                "current": "redpanda:index/topic:Topic"
             },
             "redpanda_user": {
-                "current": "redpanda:index/user:User",
-                "majorVersion": 1
+                "current": "redpanda:index/user:User"
             }
         },
         "datasources": {
             "redpanda_cluster": {
                 "current": "redpanda:index/getCluster:getCluster",
-                "majorVersion": 1,
                 "fields": {
                     "aws_private_link": {
                         "fields": {
@@ -341,7 +327,6 @@
             },
             "redpanda_network": {
                 "current": "redpanda:index/getNetwork:getNetwork",
-                "majorVersion": 1,
                 "fields": {
                     "customer_managed_resources": {
                         "fields": {
@@ -362,7 +347,6 @@
             },
             "redpanda_region": {
                 "current": "redpanda:index/getRegion:getRegion",
-                "majorVersion": 1,
                 "fields": {
                     "zones": {
                         "maxItemsOne": false
@@ -371,7 +355,6 @@
             },
             "redpanda_regions": {
                 "current": "redpanda:index/getRegions:getRegions",
-                "majorVersion": 1,
                 "fields": {
                     "regions": {
                         "maxItemsOne": false,
@@ -386,12 +369,10 @@
                 }
             },
             "redpanda_resource_group": {
-                "current": "redpanda:index/getResourceGroup:getResourceGroup",
-                "majorVersion": 1
+                "current": "redpanda:index/getResourceGroup:getResourceGroup"
             },
             "redpanda_schema": {
                 "current": "redpanda:index/getSchema:getSchema",
-                "majorVersion": 1,
                 "fields": {
                     "references": {
                         "maxItemsOne": false
@@ -399,12 +380,10 @@
                 }
             },
             "redpanda_serverless_cluster": {
-                "current": "redpanda:index/getServerlessCluster:getServerlessCluster",
-                "majorVersion": 1
+                "current": "redpanda:index/getServerlessCluster:getServerlessCluster"
             },
             "redpanda_serverless_regions": {
                 "current": "redpanda:index/getServerlessRegions:getServerlessRegions",
-                "majorVersion": 1,
                 "fields": {
                     "serverless_regions": {
                         "maxItemsOne": false
@@ -413,7 +392,6 @@
             },
             "redpanda_throughput_tiers": {
                 "current": "redpanda:index/getThroughputTiers:getThroughputTiers",
-                "majorVersion": 1,
                 "fields": {
                     "throughput_tiers": {
                         "maxItemsOne": false
